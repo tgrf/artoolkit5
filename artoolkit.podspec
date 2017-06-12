@@ -58,7 +58,7 @@ ARToolKit is software that lets programmers easily develop Augmented Reality app
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:tgrf/artoolkit5.git", :tag => "#{s.version}-ios" }
+  s.source       = { :git => "https://github.com/tgrf/artoolkit5.git", :tag => "#{s.version}-ios" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
