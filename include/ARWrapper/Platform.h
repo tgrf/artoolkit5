@@ -73,6 +73,7 @@
 #  include <TargetConditionals.h>
 #  include <AvailabilityMacros.h>
 #  if TARGET_IPHONE_SIMULATOR
+#    define TARGET_PLATFORM_IOS			1
 #  elif TARGET_OS_IPHONE
 #    define TARGET_PLATFORM_IOS			1
 #  elif TARGET_OS_MAC

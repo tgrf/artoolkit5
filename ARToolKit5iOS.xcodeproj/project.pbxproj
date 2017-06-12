@@ -9145,11 +9145,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv7s,
-					arm64,
-				);
+				ARCHS = "armv7 armv7s arm64 i386 x86_64";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				ENABLE_BITCODE = NO;
@@ -9166,6 +9162,13 @@
 					lib,
 				);
 				SDKROOT = iphoneos;
+				VALID_ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+					i386,
+					x86_64,
+				);
 			};
 			name = Distribution;
 		};
@@ -9532,11 +9535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv7s,
-					arm64,
-				);
+				ARCHS = "armv7 armv7s arm64 i386 x86_64";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
@@ -9570,6 +9569,13 @@
 					lib,
 				);
 				SDKROOT = iphoneos;
+				VALID_ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+					i386,
+					x86_64,
+				);
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -9578,11 +9584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv7s,
-					arm64,
-				);
+				ARCHS = "armv7 armv7s arm64 i386 x86_64";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				ENABLE_BITCODE = NO;
@@ -9599,6 +9601,13 @@
 					lib,
 				);
 				SDKROOT = iphoneos;
+				VALID_ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+					i386,
+					x86_64,
+				);
 			};
 			name = Release;
 		};

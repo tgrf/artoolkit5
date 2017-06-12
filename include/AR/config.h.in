@@ -470,10 +470,13 @@ enum {
 
 #if TARGET_IPHONE_SIMULATOR
 
-#error This release does not support the simulator. Please target an iOS device.
+#warning This release does not support the simulator. Please target an iOS device to test AR feature. \
+         Constants below set only to allow compilation for simulator in final product.
 #define ARDOUBLE_IS_FLOAT
-#define AR_INPUT_DUMMY
-#define AR_DEFAULT_INPUT_DUMMY
+#define AR_INPUT_IPHONE
+#define AR_DEFAULT_INPUT_IPHONE
+#define HAVE_LIBJPEG 1
+#define USE_OPENGL_ES 1
 
 #elif TARGET_OS_IPHONE
 
