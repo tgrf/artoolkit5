@@ -50,6 +50,9 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+# AppCode
+*.idea
+
 #### Other VCS
 .svn/
 
