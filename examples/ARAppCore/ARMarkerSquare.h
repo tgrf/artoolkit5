@@ -51,7 +51,7 @@
 // a single square ARToolKit marker.
 //
 
-//#import <UIKit/UIKit.h> // Using precompiled header.
+#import <UIKit/UIKit.h>
 #import "ARMarker.h"
 
 #define    AR_PATTERN_TYPE_TEMPLATE    0

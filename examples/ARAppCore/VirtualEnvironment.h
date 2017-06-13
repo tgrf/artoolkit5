@@ -51,7 +51,7 @@
 // as position and drawing, and a very simple object hierachy.
 //
 
-//#import <UIKit/UIKit.h> // Using precompiled header.
+#import <UIKit/UIKit.h>
 #import "VEObject.h"
 
 #define VIEW_DISTANCE_MIN        5.0f          // Objects closer to the camera than this will not be displayed.

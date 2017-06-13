@@ -51,7 +51,7 @@
 //  Version: 2.0
 //
 
-//#import <UIKit/UIKit.h> // Using precompiled header.
+#import <UIKit/UIKit.h>
 #import <OpenGLES/EAGL.h>
 
 #define CHECK_GL_ERROR() ({ GLenum __error = glGetError(); if(__error) printf("OpenGL error 0x%04X in %s\n", __error, __FUNCTION__); (__error ? NO : YES); })

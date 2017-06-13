@@ -46,7 +46,7 @@
 //  Author(s): Philip Lamb
 //
 
-//#import <Foundation/Foundation.h> // Using precompiled header.
+#import <Foundation/Foundation.h>
 #import "VEObject.h"
 
 @interface VEObjectOSG : VEObject {

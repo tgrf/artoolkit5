@@ -55,7 +55,7 @@
 // Additionally, it provides pose estimate filtering.
 //
 
-//#import <UIKit/UIKit.h> // Using precompiled header.
+#import <UIKit/UIKit.h>
 #import "ARMarker.h"
 
 #import <AR2/tracking.h>

@@ -56,7 +56,7 @@
 // Additionally, it provides pose estimate filtering.
 //
 
-//#import <UIKit/UIKit.h> // Using precompiled header.
+#import <UIKit/UIKit.h>
 #import <AR/ar.h>
 #import <AR/arFilterTransMat.h>
 

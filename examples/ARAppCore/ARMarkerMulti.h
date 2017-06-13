@@ -51,7 +51,7 @@
 // multiple square ARToolKit markers with a fixed relationship to each other.
 //
 
-//#import <UIKit/UIKit.h> // Using precompiled header.
+#import <UIKit/UIKit.h>
 #import "ARMarker.h"
 
 @interface ARMarkerMulti : ARMarker {
