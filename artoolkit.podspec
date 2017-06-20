@@ -75,7 +75,7 @@ ARToolKit is software that lets programmers easily develop Augmented Reality app
 
   s.subspec "AR" do |ss|
     ss.source_files = "include/AR/**/*.{h,m}",
-    s.public_header_files = "include/AR/**/*.{h}"
+    ss.public_header_files = "include/AR/**/*.{h}"
   end
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
