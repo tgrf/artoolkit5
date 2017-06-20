@@ -88,7 +88,7 @@
     // OpenGL name for the depth buffer or combined and stencil buffer that is attached to frameBuffer, if it exists (0 if it does not exist).
     GLuint depthStencilRenderBuffer;
     BOOL snapshotRequested;
-    id <EAGLViewTookSnapshotDelegate> tookSnapshotDelegate;
+    __unsafe_unretained id <EAGLViewTookSnapshotDelegate> tookSnapshotDelegate;
 
     BOOL animating;
     NSInteger animationFrameInterval;
