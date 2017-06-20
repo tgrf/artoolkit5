@@ -69,7 +69,7 @@ ARToolKit is software that lets programmers easily develop Augmented Reality app
   #
 
   s.source_files  = "include/ios7/**/*.{h,m}", "examples/ARAppCore/**/*.{h,m}"
-  s.public_header_files = "include/ios7/**/*.{h}", "examples/ARAppCore/**/*.{h}"
+  s.public_header_files = "include/ios7/**/*.{h}", "include/AR/**/*.{h}", "examples/ARAppCore/**/*.{h}"
   s.vendored_libraries = "lib/ios7/**/*.a"
   s.preserve_paths = "lib/ios7/**/*.a"
 
