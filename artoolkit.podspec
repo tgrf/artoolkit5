@@ -8,13 +8,6 @@
 
 Pod::Spec.new do |s|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
   s.name         = "artoolkit"
   s.version      = "5.3.2"
   s.summary      = "ARToolKit is software that lets programmers easily develop Augmented Reality applications."
@@ -22,42 +15,9 @@ Pod::Spec.new do |s|
 ARToolKit is software that lets programmers easily develop Augmented Reality applications. Augmented Reality (AR) is the embedding of computer generated content into the natural environment, and has many potential applications in entertainment, media, advertising, industry, and academic research.
                    DESC
   s.homepage     = "https://github.com/tgrf/artoolkit5"
-
-  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Licensing your code is important. See http://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
-
   s.license      = { :type => "LGPL v3.0", :file => "LICENSE.txt" }
-
-  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
-  #  accepts just a name if you'd rather not provide an email address.
-  #
-  #  Specify a social_media_url where others can refer to, for example a twitter
-  #  profile URL.
-  #
-
-  s.author             = { "ARToolKit Team" => "info@artoolkit.org" }
-
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If this Pod runs only on iOS or OS X, then specify the platform and
-  #  the deployment target. You can optionally include the target after the platform.
-  #
-
+  s.author       = { "ARToolKit Team" => "info@artoolkit.org" }
   s.platform     = :ios, "7.0"
-
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
-
   s.source       = { :git => "https://github.com/tgrf/artoolkit5.git", :branch => "feature/cocoapods_support" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -68,14 +28,38 @@ ARToolKit is software that lets programmers easily develop Augmented Reality app
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "include/ios7/**/*.{h,m}", "examples/ARAppCore/**/*.{h,m}"
-  s.public_header_files = "include/ios7/**/*.{h}", "examples/ARAppCore/**/*.{h}"
-  s.vendored_libraries = "lib/ios7/**/*.a"
-  s.preserve_paths = "lib/ios7/**/*.a"
+  s.source_files  = "include/*.{h,m}", "examples/ARAppCore/**/*.{h,m}"
+  s.public_header_files = "include/*.{h}", "examples/ARAppCore/**/*.{h}"
+  s.vendored_libraries = "lib/*.a", "lib/ios7/**/*.a", "lib/macosx-universal/*.a"
+
+  s.subspec "ios7" do |ss|
+    ss.source_files = "include/ios7/**/*.{h,m}",
+    ss.public_header_files = "include/ios7/**/*.{h}"
+  end
 
   s.subspec "AR" do |ss|
     ss.source_files = "include/AR/**/*.{h,m}",
     ss.public_header_files = "include/AR/**/*.{h}"
+  end
+
+  s.subspec "AR2" do |ss|
+    ss.source_files = "include/AR2/**/*.{h,m}",
+    ss.public_header_files = "include/AR2/**/*.{h}"
+  end
+
+  s.subspec "ARWrapper" do |ss|
+    ss.source_files = "include/ARWrapper/**/*.{h,m}",
+    ss.public_header_files = "include/ARWrapper/**/*.{h}"
+  end
+
+  s.subspec "Eden" do |ss|
+    ss.source_files = "include/Eden/**/*.{h,m}",
+    ss.public_header_files = "include/Eden/**/*.{h}"
+  end
+
+  s.subspec "KPM" do |ss|
+    ss.source_files = "include/KPM/**/*.{h,m}",
+    ss.public_header_files = "include/KPM/**/*.{h}"
   end
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -86,7 +70,6 @@ ARToolKit is software that lets programmers easily develop Augmented Reality app
 
   s.frameworks = "Accelerate", "AssetsLibrary", "AudioToolbox", "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "Foundation", "ImageIO", "MobileCoreServices", "OpenGLES", "QuartzCore", "UIKit"
   s.libraries = "c++", "z"
-
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
