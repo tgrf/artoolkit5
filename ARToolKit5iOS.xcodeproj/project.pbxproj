@@ -8925,6 +8925,7 @@
 				DSTROOT = "$(SRCROOT)";
 				INSTALL_PATH = /lib;
 				PRODUCT_NAME = AR2;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wno-four-char-constants",
@@ -8940,6 +8941,7 @@
 				DSTROOT = "$(SRCROOT)";
 				INSTALL_PATH = /lib;
 				PRODUCT_NAME = AR2;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wno-four-char-constants",
@@ -8956,6 +8958,7 @@
 				INSTALL_PATH = /lib;
 				PRODUCT_NAME = AR2;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wno-four-char-constants",
@@ -9145,14 +9148,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv7s,
-					arm64,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_VERSION = "";
 				HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT = NO;
@@ -9165,7 +9164,9 @@
 					lib/ios7,
 					lib,
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Distribution;
 		};
@@ -9532,15 +9533,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv7s,
-					arm64,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -9569,7 +9566,9 @@
 					lib/ios7,
 					lib,
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -9578,14 +9577,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv7s,
-					arm64,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_VERSION = "";
 				HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT = NO;
@@ -9598,7 +9593,9 @@
 					lib/ios7,
 					lib,
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s i386 x86_64 arm64";
 			};
 			name = Release;
 		};
